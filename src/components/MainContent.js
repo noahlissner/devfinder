@@ -21,6 +21,7 @@ const MainContent = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setSearchInput("");
     apiCall();
   };
 
@@ -33,7 +34,6 @@ const MainContent = () => {
     <div className="mt-7 w-full ">
       <form
         onSubmit={handleSubmit}
-        onChange={(e) => handleChange(e.target.value)}
         className="flex h-[60px] sm:h-[69px] items-center bg-lightTheme-bg-light dark:bg-darkTheme-bg-light rounded-2xl shadow-light dark:shadow-none duration-150"
       >
         <img src={SearchIcon} alt="" className="ml-4 mr-2.5 sm:ml-8 sm:mr-6" />
@@ -41,6 +41,8 @@ const MainContent = () => {
           type="text"
           className="flex-1 bg-transparent focus:outline-none text-lg text-lightTheme-logo dark:text-darkTheme-text placeholder-lightTheme-text-light dark:placeholder-darkTheme-text"
           placeholder="Search Github username..."
+          value={searchInput}
+          onChange={(e) => handleChange(e.target.value)}
         />
         <span
           className={`text-[15px] text-[#F74646] font-bold ${
