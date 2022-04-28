@@ -16,6 +16,7 @@ module.exports = {
       "lightTheme-text-light": "#4b6a9b",
       "lightTheme-logo": "#222731",
       "lightTheme-switch": "#697C9A",
+      "darkTheme-switch-hover": "#90a3d3",
       "darkTheme-bg-dark": "#141d2f",
       "darkTheme-bg-light": "#1e2a47",
       "darkTheme-text": "#fff",

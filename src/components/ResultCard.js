@@ -1,5 +1,6 @@
 import React from "react";
 import moment from "moment";
+import { motion } from "framer-motion";
 
 import { ReactComponent as LocationIcon } from "../assets/icon-location.svg";
 import { ReactComponent as WebsiteIcon } from "../assets/icon-website.svg";
@@ -9,7 +10,11 @@ import { ReactComponent as CompanyIcon } from "../assets/icon-company.svg";
 const ResultCard = ({ data }) => {
   // console.log(data);
   return (
-    <div className="mt-4 sm:mt-6 bg-lightTheme-bg-light dark:bg-darkTheme-bg-light rounded-2xl shadow-light dark:shadow-none duration-150">
+    <motion.div
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      className="mt-4 sm:mt-6 bg-lightTheme-bg-light dark:bg-darkTheme-bg-light rounded-2xl shadow-light dark:shadow-none duration-150"
+    >
       <div className="flex flex-col px-6 pt-8 pb-12 sm:p-12 w-full">
         {/* Top Section */}
         <div className="flex ">
@@ -121,7 +126,7 @@ const ResultCard = ({ data }) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -8,6 +8,14 @@
   font-family: "Space Mono", sans-serif;
 }
 
+*::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  overflow: hidden;
+}
+
 h1 {
   font-weight: bold;
   font-size: 26px;

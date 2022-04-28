@@ -52,7 +52,7 @@ const MainContent = () => {
         <button
           type="submit"
           className="w-[84px] h-[46px] sm:w-[106px] sm:h-[50px] rounded-xl bg-primary-blue
-        text-darkTheme-text mx-[7px] sm:mr-[10px] sm:ml-6 hover:bg-button-hover duration-150"
+        text-darkTheme-text mx-[7px] sm:mr-[10px] sm:ml-6 hover:bg-button-hover duration-150 font-bold"
         >
           Search
         </button>
