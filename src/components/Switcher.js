@@ -1,27 +1,17 @@
 import React, { useState } from "react";
 import useDarkSide from "../hooks/useDarkSide";
 import { AnimatePresence, motion } from "framer-motion";
-// import { RiMoonClearFill, RiSunFill } from "react-icons/ri";
 
 import { ReactComponent as MoonIcon } from "../assets/icon-moon.svg";
 import { ReactComponent as SunIcon } from "../assets/icon-sun.svg";
 
 export default function Switcher() {
   const [colorTheme, setTheme] = useDarkSide();
-  // const [darkSide, setDarkSide] = useState(colorTheme === "light" ? true : false)
   const [isOn, setIsOn] = useState(false);
-
-  // const toggleSwitch = () => setIsOn(!isOn);
 
   const toggleDarkMode = () => {
     setIsOn(colorTheme === "light" ? false : true);
     setTheme(colorTheme);
-  };
-
-  const spring = {
-    type: "spring",
-    stiffness: 700,
-    damping: 30,
   };
 
   return (

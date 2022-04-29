@@ -28,7 +28,12 @@ const ResultCard = ({ data }) => {
               <h1 className="text-lightTheme-text-dark dark:text-darkTheme-text">
                 {data.name}
               </h1>
-              <a href={data.html_url} className="text-primary-blue">
+              <a
+                href={data.html_url}
+                className="text-primary-blue hover:text-button-hover duration-150"
+                target="_blank"
+                rel="noreferrer"
+              >
                 @{data.login}
               </a>
             </div>

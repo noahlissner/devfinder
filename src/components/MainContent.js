@@ -1,28 +1,20 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import SearchIcon from "../assets/icon-search.svg";
 import ResultCard from "./ResultCard";
+import { fetchUser } from "../services/fetchUser";
 
 const MainContent = () => {
   const [searchInput, setSearchInput] = useState("");
   const [data, setData] = useState();
   const [error, setError] = useState();
 
-  const apiCall = async () => {
-    try {
-      const response = await axios.get(
-        `https://api.github.com/users/${searchInput}`
-      );
-      setData(response.data);
-    } catch (error) {
-      setError(true);
-    }
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setSearchInput("");
-    apiCall();
+
+    const resp = await fetchUser(searchInput);
+    setData(resp);
+    // console.log(resp);
   };
 
   const handleChange = (value) => {
